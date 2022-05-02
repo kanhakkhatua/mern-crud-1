@@ -119,7 +119,7 @@ function Login() {
     axios
       .post("http://localhost:3000/login", loginValue)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
 
         if (res.status === 200) {
           localStorage.setItem(
@@ -180,7 +180,7 @@ function Login() {
           showConfirmButton: false,
           timer: 1000,
         });
-        console.log(res);
+        // console.log(res);
       })
       .catch((err) => {
         Swal.fire({

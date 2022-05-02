@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+/* .dropdown-toggle::after {
+  content: none;
+} */
+.header-btn {
+  border: none;
+  background-color: white;
+  margin-left: 1.7rem;
+}
+.header-btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-0.8px);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +48,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.modal-content {
+  width: 120%;
 }

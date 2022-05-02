@@ -1,0 +1,90 @@
+.main-div {
+  height: auto;
+  width: auto;
+  margin-top: 100px;
+  margin-left: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+}
+.link-class {
+  background-color: #fafbfc;
+  color: rgb(155, 150, 150);
+  font-weight: 600;
+  text-decoration: none;
+}
+.link-class:hover {
+  color: rgb(63, 60, 60);
+  transform: translateY(-0.8px);
+}
+
+/* Admin dash board CSS */
+
+.table-parent {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+.table-parent td,
+.table-parent th {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.table-parent th {
+  background-color: #f6f6f6;
+  color: #4b556c;
+}
+.table-parent tbody :hover {
+  background-color: #e3eef5;
+}
+
+.create-user-btn {
+  margin-bottom: 10px;
+  float: right;
+  background-color: #718096;
+  outline: none;
+  border: none;
+  border-radius: 0.7rem;
+  height: 2.5rem;
+  width: 10rem;
+  color: white;
+  font-weight: 600;
+}
+.create-user-btn:hover {
+  background-color: #2e343c;
+  color: white;
+}
+.view-user-btn {
+  /* background-color: #718096; */
+  outline: none;
+  border: none;
+  border-radius: 0.7rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  /* color: white; */
+  font-weight: 600;
+}
+/* .view-user-btn:hover {
+  background-color: #2e343c;
+  color: white;
+  transform: translateY(-1px);
+} */
+.edit-user-btn {
+  margin-bottom: 10px;
+  float: right;
+  /* background-color: #718096; */
+  outline: none;
+  border: none;
+  border-radius: 0.7rem;
+  height: 2.5rem;
+  width: 3rem;
+  /* color: white; */
+  font-weight: 600;
+}
+/* .edit-user-btn:hover {
+  background-color: #2e343c;
+  color: white;
+  transform: translateY(-1px);
+} */
