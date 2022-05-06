@@ -53,3 +53,16 @@
 .modal-content {
   width: 120%;
 }
+
+.borderless td,
+.borderless th,
+.borderless thead tr {
+  border: none;
+  border-top: hidden;
+}
+.borderless thead {
+  background-color: rgb(246 246 246);
+}
+.table tbody :hover {
+  background-color: #e3eef5;
+}

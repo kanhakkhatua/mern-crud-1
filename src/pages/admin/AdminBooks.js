@@ -157,10 +157,10 @@ const AdminBooks = () => {
     await axios(config)
       .then((res) => {
         // console.log(res);
+        localStorage.removeItem("edituserId");
         getBookData();
       })
       .catch((err) => console.log(err));
-    localStorage.removeItem("edituserId");
 
     setchangeModal(false);
     setShow(false);
@@ -182,11 +182,10 @@ const AdminBooks = () => {
     await axios(config)
       .then((res) => {
         // console.log(res);
+        localStorage.removeItem("deletebookId");
         getBookData();
       })
       .catch((err) => console.log(err));
-
-    localStorage.removeItem("deletebookId");
   }
 
   return (
@@ -198,7 +197,7 @@ const AdminBooks = () => {
       </div>
       {/* Table  */}
       <div>
-        <table cellSpacing="0" cellPadding="0" className="table-parent">
+        <table className="table borderless">
           <thead>
             <tr>
               <th>Name</th>

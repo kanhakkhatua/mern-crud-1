@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -32,10 +32,14 @@ function Header() {
           aria-labelledby="dropdownMenuButton1"
         >
           <li>
-            <button className="header-btn">
+            <Link
+              to="./dashboard"
+              className="header-btn"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <i className="fa-solid fa-user"></i>{" "}
               <span style={{ marginLeft: "0.5rem" }}>Profile</span>
-            </button>
+            </Link>
           </li>
           <li>
             <button className="header-btn" onClick={HandleLogout}>

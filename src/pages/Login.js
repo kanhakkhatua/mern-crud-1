@@ -119,7 +119,7 @@ function Login() {
     axios
       .post("http://localhost:3000/login", loginValue)
       .then((res) => {
-        // console.log(res);
+        // console.log(res.data.data);
 
         if (res.status === 200) {
           localStorage.setItem(
@@ -127,20 +127,22 @@ function Login() {
             JSON.stringify({
               token: res.data.token,
               userType: res.data.data.userType,
+              data: res.data.data,
             })
           );
           setSpinner(false);
           navigate("/dashboard");
         }
       })
-      .catch((err) =>
+      .catch((err) => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "User Not Found ... Please Register !",
           footer: err,
-        })
-      );
+        });
+        setSpinner(false);
+      });
   };
 
   const handleSubmitModal = () => {

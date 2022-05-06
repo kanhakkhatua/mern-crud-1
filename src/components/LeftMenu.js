@@ -8,35 +8,60 @@ function LeftMenu() {
   const token = JSON.parse(localStorage.getItem("token"));
 
   return (
-    <>
-      <div className="main-div d-flex flex-column">
-        <div>
-          <Link to="./dashboard" className="link-class ">
-            <span>
-              <AiOutlineHome /> <span>Dashboard</span>
+    <div
+      className="d-flex flex-column"
+      style={{ marginLeft: "2rem", marginTop: "8rem" }}
+    >
+      <div>
+        <Link to="./dashboard" className="link-class ">
+          <span style={{ display: "flex" }}>
+            <AiOutlineHome />{" "}
+            <span style={{ justifyContent: "flex-end", marginLeft: "5px" }}>
+              Dashboard
             </span>
-          </Link>
-        </div>
-        <div className="d-flex justify-content-center my-3">
-          <Link
-            className="link-class "
-            to={token.userType === "user" ? "./userbooks" : "./adminbooks"}
-          >
-            <i className="fa-solid fa-book"></i>{" "}
-            {token.userType === "user" ? "Books" : "Books"}
-          </Link>
-        </div>
-
-        <div>
-          <Link to="./bookcategory" className="link-class ">
-            <span>
-              <FaBook />
-              <span>Books Category</span>
-            </span>
-          </Link>
-        </div>
+          </span>
+        </Link>
       </div>
-    </>
+
+      <div>
+        <Link
+          className="link-class "
+          to={token.userType === "user" ? "./userbooks" : "./adminbooks"}
+        >
+          <i className="fa-solid fa-book"></i>{" "}
+          <span style={{ justifyContent: "flex-end", marginLeft: "5px" }}>
+            {token.userType === "user" ? "Books" : "Books"}
+          </span>
+        </Link>
+      </div>
+
+      {token.userType === "admin" ? (
+        <>
+          <div style={{ marginTop: "8px" }}>
+            <Link to="./alluser" className="link-class">
+              <span style={{ display: "flex" }}>
+                <i className="fa-solid fa-user"></i>{" "}
+                <span style={{ justifyContent: "flex-end", marginLeft: "5px" }}>
+                  User Data
+                </span>
+              </span>
+            </Link>
+          </div>
+          <div>
+            <Link to="./bookcategory" className="link-class ">
+              <span style={{ display: "flex" }}>
+                <FaBook />
+                <span style={{ justifyContent: "flex-end", marginLeft: "5px" }}>
+                  Books Category
+                </span>
+              </span>
+            </Link>
+          </div>{" "}
+        </>
+      ) : (
+        ""
+      )}
+    </div>
   );
 }
 
