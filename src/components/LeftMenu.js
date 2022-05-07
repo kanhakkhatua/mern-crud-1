@@ -10,7 +10,7 @@ function LeftMenu() {
   return (
     <div
       className="d-flex flex-column"
-      style={{ marginLeft: "2rem", marginTop: "8rem" }}
+      style={{ marginLeft: "2rem", marginTop: "3.5rem" }}
     >
       <div>
         <Link to="./dashboard" className="link-class ">

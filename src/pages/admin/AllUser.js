@@ -208,9 +208,10 @@ function AllUser() {
       .then((res) => {
         // console.log(res);
         getUserData();
+        localStorage.removeItem("edituserId");
       })
       .catch((err) => console.log(err));
-    localStorage.removeItem("edituserId");
+
     setchangeModal(false);
     setShow(false);
   };

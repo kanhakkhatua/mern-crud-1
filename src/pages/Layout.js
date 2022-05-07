@@ -10,7 +10,7 @@ function Layout() {
         <div
           style={{
             position: "fixed",
-            width: "19%",
+            width: "12rem",
             height: "100vh",
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           }}
@@ -20,7 +20,7 @@ function Layout() {
 
         <div
           className=" d-flex flex-column"
-          style={{ marginLeft: "12rem", width: "80%" }}
+          style={{ marginLeft: "12rem", width: "90%" }}
         >
           <div
             className="sticky-top"
